@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sample_data", # Replace with your own username
-    version="0.0.2",
+    version="0.0.6",
     author="Joel Horowitz",
     author_email="joelhoro@gmail.com",
     description="A few sample datasets",
@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/joelhoro/sample_data",
     packages=setuptools.find_packages(),
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
