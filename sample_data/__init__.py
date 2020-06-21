@@ -11,3 +11,4 @@ def _getcsv(name):
 countries = _getcsv('countries')
 airbnb = _getcsv('airbnb')
 corona = _getcsv('corona')
+drinks = _getcsv('drinks')
