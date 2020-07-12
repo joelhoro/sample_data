@@ -9,7 +9,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="sample_data", # Replace with your own username
-    version="0.0.9",
+    version="0.0.10",
     author="Joel Horowitz",
     author_email="joelhoro@gmail.com",
     description="A few sample datasets",
