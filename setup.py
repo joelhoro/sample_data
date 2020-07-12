@@ -10,8 +10,11 @@ with open("requirements.txt", "r") as fh:
     requirements = [r for r in requirements if r != "" ]
 
 def git_tag():
-    tag = check_output(['git','describe','--tags'])
-    tag = tag.decode('ascii')[:-1]
+    try:
+       tag = check_output(['git','describe','--tags'])
+       tag = tag.decode('ascii')[:-1]
+    except:
+       tag = 'v0.0.0'
     print("Getting git tag: " + tag)
     return tag
     
