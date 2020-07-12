@@ -7,9 +7,15 @@ with open("requirements.txt", "r") as fh:
     requirements = fh.read().split("\n")
     requirements = [r for r in requirements if r != "" ]
 
+def git_tag():
+    tag = check_output(['git','describe','--tags'])
+    tag = tag.decode('ascii')[:-1]
+    print("Getting git tag: " + tag)
+    return tag
+    
 setuptools.setup(
     name="sample_data", # Replace with your own username
-    version="0.0.10",
+    version=git_tag()[1:],
     author="Joel Horowitz",
     author_email="joelhoro@gmail.com",
     description="A few sample datasets",
